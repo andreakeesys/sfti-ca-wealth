@@ -14,7 +14,7 @@ class InterestRate
      * @param float|null $value Current rate as decimal
      * @param DayCountBasis|null $dayCountBasis Day count basis
      * @param string|null $paymentDate Date of the next interest payment
-     * @param string|null $paymentFrequency Frequency of an interest payment
+     * @param PaymentFrequency|null $paymentFrequency Frequency of an interest payment
      * @param string|null $basis Benchmark by which floating rate will adjust
      * @param float|null $spread The floating rate will be equal to the base rate plus the spread
      */
@@ -23,7 +23,7 @@ class InterestRate
         private readonly ?float $value = null,
         private readonly ?DayCountBasis $dayCountBasis = null,
         private readonly ?string $paymentDate = null,
-        private readonly ?string $paymentFrequency = null,
+        private readonly ?PaymentFrequency $paymentFrequency = null,
         private readonly ?string $basis = null,
         private readonly ?float $spread = null
     ) {
@@ -72,9 +72,9 @@ class InterestRate
     /**
      * Get the payment frequency
      *
-     * @return string|null
+     * @return PaymentFrequency|null
      */
-    public function getPaymentFrequency(): ?string
+    public function getPaymentFrequency(): ?PaymentFrequency
     {
         return $this->paymentFrequency;
     }
@@ -111,12 +111,16 @@ class InterestRate
             ? DayCountBasis::from($data['dayCountBasis']) 
             : null;
             
+        $paymentFrequency = isset($data['paymentFrequency']) 
+            ? PaymentFrequency::from($data['paymentFrequency']) 
+            : null;
+            
         return new self(
             InterestRateType::from($data['type']),
             isset($data['value']) ? (float)$data['value'] : null,
             $dayCountBasis,
             $data['paymentDate'] ?? null,
-            $data['paymentFrequency'] ?? null,
+            $paymentFrequency,
             $data['basis'] ?? null,
             isset($data['spread']) ? (float)$data['spread'] : null
         );
@@ -146,7 +150,7 @@ class InterestRate
         }
         
         if ($this->paymentFrequency !== null) {
-            $data['paymentFrequency'] = $this->paymentFrequency;
+            $data['paymentFrequency'] = $this->paymentFrequency->value;
         }
         
         if ($this->basis !== null) {
