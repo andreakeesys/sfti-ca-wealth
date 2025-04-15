@@ -10,7 +10,7 @@ namespace OpenWealth\CustodyServices\Model;
 class Movement
 {
     /**
-     * @param string $type Type of movement
+     * @param MovementType $type Type of movement
      * @param string $movementDate Date when the movement was confirmed
      * @param FinancialInstrument $financialInstrument Financial instrument
      * @param Account $account Account
@@ -23,7 +23,7 @@ class Movement
      * @param string|null $movementTypeAdditionalInformation Additional information about the movement type
      */
     public function __construct(
-        private readonly string $type,
+        private readonly MovementType $type,
         private readonly string $movementDate,
         private readonly FinancialInstrument $financialInstrument,
         private readonly Account $account,
@@ -40,9 +40,9 @@ class Movement
     /**
      * Get the movement type
      *
-     * @return string
+     * @return MovementType
      */
-    public function getType(): string
+    public function getType(): MovementType
     {
         return $this->type;
     }
@@ -165,7 +165,7 @@ class Movement
             : null;
             
         return new self(
-            $data['type'],
+            MovementType::from($data['type']),
             $data['movementDate'],
             $financialInstrument,
             $account,
@@ -187,7 +187,7 @@ class Movement
     public function toArray(): array
     {
         $data = [
-            'type' => $this->type,
+            'type' => $this->type->value,
             'movementDate' => $this->movementDate,
             'financialInstrument' => $this->financialInstrument->toArray(),
             'account' => $this->account->toArray(),

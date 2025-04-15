@@ -11,7 +11,7 @@ class Account
 {
     /**
      * @param string $id Unique and unambiguous identification for the account
-     * @param string $type Type of the account (cashAccount, safekeepingAccount, other)
+     * @param AccountType $type Type of the account (cashAccount, safekeepingAccount, other)
      * @param string $referenceCurrency ISO 4217 currency code
      * @param string|null $name Name of the account
      * @param string|null $iban International Banking Account Number
@@ -21,7 +21,7 @@ class Account
      */
     public function __construct(
         private readonly string $id,
-        private readonly string $type,
+        private readonly AccountType $type,
         private readonly string $referenceCurrency,
         private readonly ?string $name = null,
         private readonly ?string $iban = null,
@@ -44,9 +44,9 @@ class Account
     /**
      * Get the account type
      *
-     * @return string
+     * @return AccountType
      */
-    public function getType(): string
+    public function getType(): AccountType
     {
         return $this->type;
     }
@@ -125,7 +125,7 @@ class Account
             
         return new self(
             $data['id'],
-            $data['type'],
+            AccountType::from($data['type']),
             $data['referenceCurrency'],
             $data['name'] ?? null,
             $data['iban'] ?? null,
@@ -144,7 +144,7 @@ class Account
     {
         $data = [
             'id' => $this->id,
-            'type' => $this->type,
+            'type' => $this->type->value,
             'referenceCurrency' => $this->referenceCurrency,
         ];
         

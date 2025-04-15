@@ -10,7 +10,7 @@ namespace OpenWealth\CustodyServices\Model;
 class InterestRate
 {
     /**
-     * @param string $type Type of interest (fixed, variable, staggered)
+     * @param InterestRateType $type Type of interest (fixed, variable, staggered)
      * @param float|null $value Current rate as decimal
      * @param string|null $dayCountBasis Day count basis
      * @param string|null $paymentDate Date of the next interest payment
@@ -19,7 +19,7 @@ class InterestRate
      * @param float|null $spread The floating rate will be equal to the base rate plus the spread
      */
     public function __construct(
-        private readonly string $type,
+        private readonly InterestRateType $type,
         private readonly ?float $value = null,
         private readonly ?string $dayCountBasis = null,
         private readonly ?string $paymentDate = null,
@@ -32,9 +32,9 @@ class InterestRate
     /**
      * Get the interest rate type
      *
-     * @return string
+     * @return InterestRateType
      */
-    public function getType(): string
+    public function getType(): InterestRateType
     {
         return $this->type;
     }
@@ -108,7 +108,7 @@ class InterestRate
     public static function fromArray(array $data): self
     {
         return new self(
-            $data['type'],
+            InterestRateType::from($data['type']),
             isset($data['value']) ? (float)$data['value'] : null,
             $data['dayCountBasis'] ?? null,
             $data['paymentDate'] ?? null,
@@ -126,7 +126,7 @@ class InterestRate
     public function toArray(): array
     {
         $data = [
-            'type' => $this->type,
+            'type' => $this->type->value,
         ];
         
         if ($this->value !== null) {

@@ -10,11 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class Quantity
 {
     /**
-     * @param string $type Type of the amount (unit, faceAmount, amortisedValue, digitalTokenUnit)
+     * @param QuantityType $type Type of the amount (unit, faceAmount, amortisedValue, digitalTokenUnit)
      * @param float $value Signed decimal number
      */
     public function __construct(
-        private readonly string $type,
+        private readonly QuantityType $type,
         private readonly float $value
     ) {
     }
@@ -22,9 +22,9 @@ class Quantity
     /**
      * Get the quantity type
      *
-     * @return string
+     * @return QuantityType
      */
-    public function getType(): string
+    public function getType(): QuantityType
     {
         return $this->type;
     }
@@ -48,7 +48,7 @@ class Quantity
     public static function fromArray(array $data): self
     {
         return new self(
-            $data['type'],
+            QuantityType::from($data['type']),
             (float)$data['value']
         );
     }
@@ -61,7 +61,7 @@ class Quantity
     public function toArray(): array
     {
         return [
-            'type' => $this->type,
+            'type' => $this->type->value,
             'value' => $this->value,
         ];
     }

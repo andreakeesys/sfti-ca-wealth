@@ -10,12 +10,12 @@ namespace OpenWealth\CustodyServices\Model;
 class Price
 {
     /**
-     * @param string $type Type of price (actual or percentage)
+     * @param PriceType $type Type of price (actual or percentage)
      * @param float $value Signed decimal number
      * @param string|null $currency ISO 4217 currency code
      */
     public function __construct(
-        private readonly string $type,
+        private readonly PriceType $type,
         private readonly float $value,
         private readonly ?string $currency = null
     ) {
@@ -24,9 +24,9 @@ class Price
     /**
      * Get the price type
      *
-     * @return string
+     * @return PriceType
      */
-    public function getType(): string
+    public function getType(): PriceType
     {
         return $this->type;
     }
@@ -60,7 +60,7 @@ class Price
     public static function fromArray(array $data): self
     {
         return new self(
-            $data['type'],
+            PriceType::from($data['type']),
             (float)$data['value'],
             $data['currency'] ?? null
         );
@@ -74,7 +74,7 @@ class Price
     public function toArray(): array
     {
         $data = [
-            'type' => $this->type,
+            'type' => $this->type->value,
             'value' => $this->value,
         ];
         

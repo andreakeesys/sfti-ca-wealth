@@ -11,7 +11,7 @@ class Transaction
 {
     /**
      * @param string $id Transaction ID given by the bank
-     * @param string $type Type of the transaction
+     * @param TransactionType $type Type of the transaction
      * @param string $transactionDate Date when the transaction entity is exposed in the API
      * @param string $customerId Unique and unambiguous identification used by the bank for the customer
      * @param bool $reversalIndicator Indicates whether it is the reversal of a previously reported movement
@@ -32,7 +32,7 @@ class Transaction
      */
     public function __construct(
         private readonly string $id,
-        private readonly string $type,
+        private readonly TransactionType $type,
         private readonly string $transactionDate,
         private readonly string $customerId,
         private readonly bool $reversalIndicator,
@@ -66,9 +66,9 @@ class Transaction
     /**
      * Get the transaction type
      *
-     * @return string
+     * @return TransactionType
      */
-    public function getType(): string
+    public function getType(): TransactionType
     {
         return $this->type;
     }
@@ -286,7 +286,7 @@ class Transaction
         
         return new self(
             $data['id'],
-            $data['type'],
+            TransactionType::from($data['type']),
             $data['transactionDate'],
             $data['customerId'],
             $data['reversalIndicator'],
@@ -316,7 +316,7 @@ class Transaction
     {
         $data = [
             'id' => $this->id,
-            'type' => $this->type,
+            'type' => $this->type->value,
             'transactionDate' => $this->transactionDate,
             'customerId' => $this->customerId,
             'reversalIndicator' => $this->reversalIndicator,
