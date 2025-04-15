@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Model Relationships">
-    <mxGraphModel dx="7078" dy="3529" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="3926" dy="1647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -8,16 +8,12 @@
           <mxGeometry x="1200" y="160" width="190" height="110" as="geometry" />
         </mxCell>
         <mxCell id="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FinancialInstrumentBase&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;# type: string&lt;br&gt;# name: string&lt;br&gt;# identificationList: ?array&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ toArray(): array&lt;br&gt;# createIdentificationList(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1800" y="480" width="190" height="120" as="geometry" />
+          <mxGeometry x="1870" y="480" width="190" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="2" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="1" target="0" edge="1">
+        <mxCell id="2" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="1" target="0" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="490" y="390" as="sourcePoint" />
             <mxPoint x="650" y="390" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="1895" y="360" />
-              <mxPoint x="1295" y="360" />
-            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FinancialInstrumentFactory&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ createFromArray(data): FinancialInstrument&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -35,186 +31,186 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Bond&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;bond&#39;&lt;br&gt;- interestRate: ?InterestRate&lt;br&gt;- maturityDate: ?string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="670" width="160" height="110" as="geometry" />
+          <mxGeometry x="2070" y="670" width="160" height="110" as="geometry" />
         </mxCell>
         <mxCell id="5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Cash&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;cash&#39;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="790" width="160" height="90" as="geometry" />
+          <mxGeometry x="2070" y="790" width="160" height="90" as="geometry" />
         </mxCell>
         <mxCell id="74" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Commodity&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;commodity&#39;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="890" width="160" height="90" as="geometry" />
+          <mxGeometry x="2070" y="890" width="160" height="90" as="geometry" />
         </mxCell>
         <mxCell id="63" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Credit&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;credit&#39;&lt;br&gt;- principalAmount: CurrencyAmount&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="990" width="210" height="90" as="geometry" />
+          <mxGeometry x="2070" y="990" width="210" height="90" as="geometry" />
         </mxCell>
         <mxCell id="64" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CreditDefaultSwap&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;creditDefaultSwap&#39;&lt;br&gt;- notionalAmount: CurrencyAmount&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="1090" width="210" height="90" as="geometry" />
+          <mxGeometry x="2070" y="1090" width="210" height="90" as="geometry" />
         </mxCell>
         <mxCell id="62" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CryptoAsset&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;cryptoAsset&#39;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="1190" width="160" height="90" as="geometry" />
+          <mxGeometry x="2070" y="1190" width="160" height="90" as="geometry" />
         </mxCell>
         <mxCell id="7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Equity&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;equity&#39;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="1290" width="160" height="90" as="geometry" />
+          <mxGeometry x="2070" y="1290" width="160" height="90" as="geometry" />
         </mxCell>
         <mxCell id="65" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Fund&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;fund&#39;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="1390" width="160" height="90" as="geometry" />
+          <mxGeometry x="2070" y="1390" width="160" height="90" as="geometry" />
         </mxCell>
         <mxCell id="72" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Future&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;future&#39;&lt;br&gt;- underlyingFinancialInstrument: FinancialInstrument&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="1490" width="330" height="90" as="geometry" />
+          <mxGeometry x="2070" y="1490" width="330" height="90" as="geometry" />
         </mxCell>
         <mxCell id="66" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FxForward&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;fxForward&#39;&lt;br&gt;- amountPaid: CurrencyAmount&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="1590" width="210" height="90" as="geometry" />
+          <mxGeometry x="2070" y="1590" width="210" height="90" as="geometry" />
         </mxCell>
         <mxCell id="67" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FxOption&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;fxOption&#39;&lt;br&gt;- expiryDateTime: string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="1690" width="210" height="90" as="geometry" />
+          <mxGeometry x="2070" y="1690" width="210" height="90" as="geometry" />
         </mxCell>
         <mxCell id="68" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FxSwap&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;fxSwap&#39;&lt;br&gt;- nearAmountPaid: CurrencyAmount&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="1790" width="210" height="90" as="geometry" />
+          <mxGeometry x="2070" y="1790" width="210" height="90" as="geometry" />
         </mxCell>
         <mxCell id="73" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Index&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;index&#39;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="1890" width="160" height="90" as="geometry" />
+          <mxGeometry x="2070" y="1890" width="160" height="90" as="geometry" />
         </mxCell>
         <mxCell id="69" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;InterestRateSwap&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;interestRateSwap&#39;&lt;br&gt;- notionalAmount: CurrencyAmount&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="1990" width="210" height="90" as="geometry" />
+          <mxGeometry x="2070" y="1990" width="210" height="90" as="geometry" />
         </mxCell>
         <mxCell id="9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;MoneyMarket&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE_FIXED_LOAN: string = &#39;fixedLoan&#39;&lt;br&gt;+ TYPE_FIXED_DEPOSIT: string = &#39;fixedDeposit&#39;&lt;br&gt;+ TYPE_CALLABLE_LOAN: string = &#39;callableLoan&#39;&lt;br&gt;+ TYPE_CALLABLE_DEPOSIT: string = &#39;callableDeposit&#39;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="2090" width="350" height="120" as="geometry" />
+          <mxGeometry x="2070" y="2090" width="350" height="120" as="geometry" />
         </mxCell>
         <mxCell id="70" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Mortgage&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;mortgage&#39;&lt;br&gt;- principalAmount: CurrencyAmount&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="2220" width="210" height="90" as="geometry" />
+          <mxGeometry x="2070" y="2220" width="210" height="90" as="geometry" />
         </mxCell>
         <mxCell id="8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Option&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;option&#39;&lt;br&gt;- underlyingFinancialInstrument: FinancialInstrument&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="2320" width="350" height="120" as="geometry" />
+          <mxGeometry x="2070" y="2320" width="350" height="120" as="geometry" />
         </mxCell>
         <mxCell id="71" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TotalReturnSwap&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;totalReturnSwap&#39;&lt;br&gt;- notionalAmount: CurrencyAmount&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2000" y="2550" width="210" height="90" as="geometry" />
+          <mxGeometry x="2070" y="2550" width="210" height="90" as="geometry" />
         </mxCell>
         <mxCell id="88" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;OtherFinancialInstrument&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ TYPE: string = &#39;other&#39;&lt;br&gt;- underlyingFinancialInstrument: ?FinancialInstrument&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="2000" y="2450" width="330" height="90" as="geometry" />
+          <mxGeometry x="2070" y="2450" width="330" height="90" as="geometry" />
         </mxCell>
         <mxCell id="10" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="5" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="11" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="12" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="7" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="13" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="14" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="9" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="75" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="62" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="76" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="63" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="77" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="64" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="78" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="65" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="79" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="66" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="80" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="67" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="81" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="68" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="82" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="69" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="83" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="70" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="84" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="71" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="85" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="72" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="1475" y="600" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="1545" y="600" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="86" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="73" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="1475" y="600" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="1545" y="600" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="87" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="74" target="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="1475" y="560" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="1545" y="560" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="89" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="88" target="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="1895" y="600" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="1965" y="600" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="15" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Transaction&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- id: string&lt;br&gt;- type: TransactionType&lt;br&gt;- movementList: ?array&lt;br&gt;- triggeringFinancialInstrument: ?FinancialInstrument&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1040" y="480" width="310" height="150" as="geometry" />
+          <mxGeometry x="1110" y="600" width="310" height="150" as="geometry" />
         </mxCell>
         <mxCell id="94" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="15" target="93">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="980" y="555" />
-              <mxPoint x="980" y="1555" />
+              <mxPoint x="1070" y="675" />
+              <mxPoint x="1070" y="1565" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -224,18 +220,18 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="16" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ValuatedPosition&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- id: string&lt;br&gt;- financialInstrument: FinancialInstrument&lt;br&gt;- account: Account&lt;br&gt;- quantity: Quantity&lt;br&gt;- valuation: Valuation&lt;br&gt;- price: ?ValuationPrice&lt;br&gt;- foreignExchangeRate: ?ValuationForeignExchangeRate&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="540" y="632" width="250" height="195" as="geometry" />
+          <mxGeometry x="640" y="817" width="360" height="195" as="geometry" />
         </mxCell>
         <mxCell id="17" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Movement&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- type: MovementType&lt;br&gt;- financialInstrument: FinancialInstrument&lt;br&gt;- account: Account&lt;br&gt;- quantity: Quantity&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1440" y="480" width="240" height="140" as="geometry" />
+          <mxGeometry x="1510" y="480" width="240" height="140" as="geometry" />
         </mxCell>
         <mxCell id="91" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="17" target="90">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="560" y="390" as="sourcePoint" />
+            <mxPoint x="720" y="390" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1400" y="550" />
-              <mxPoint x="1400" y="900" />
+              <mxPoint x="1470" y="550" />
+              <mxPoint x="1470" y="900" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -244,14 +240,10 @@
             <mxPoint x="-1" y="-13" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="18" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.332;entryY=0.964;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="15" target="0" edge="1">
+        <mxCell id="18" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.465;exitY=-0.013;exitDx=0;exitDy=0;entryX=0.292;entryY=0.989;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="15" target="0" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="490" y="390" as="sourcePoint" />
             <mxPoint x="650" y="390" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="1195" y="410" />
-              <mxPoint x="1263" y="410" />
-            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="18a" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="18" vertex="1" connectable="0">
@@ -259,10 +251,10 @@
             <mxPoint x="6" y="-9" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="19" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="16" edge="1">
+        <mxCell id="19" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.085;entryY=0.996;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="16" edge="1" target="0">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="1230" y="270" as="targetPoint" />
+            <mxPoint x="1020" y="290" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="19a" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="19" vertex="1" connectable="0">
@@ -275,8 +267,8 @@
             <mxPoint x="490" y="390" as="sourcePoint" />
             <mxPoint x="650" y="390" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1570" y="375" />
-              <mxPoint x="1280" y="375" />
+              <mxPoint x="1630" y="400" />
+              <mxPoint x="1295" y="400" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -285,55 +277,69 @@
             <mxPoint x="-70" y="-9" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="114" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;AccountType&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ CASH_ACCOUNT: string = &#39;cashAccount&#39;&lt;br&gt;+ SAFEKEEPING_ACCOUNT: string = &#39;safekeepingAccount&#39;&lt;br&gt;+ OTHER: string = &#39;other&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="80" y="90" width="450" height="120" as="geometry" />
+        </mxCell>
         <mxCell id="21" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Account&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- id: string&lt;br&gt;- type: AccountType&lt;br&gt;- referenceCurrency: string&lt;br&gt;- portfolioInformation: ?PortfolioInformation&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="730" y="80" width="270" height="140" as="geometry" />
         </mxCell>
         <mxCell id="22" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;AccountServiceInterface&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getCustomerAccounts(): array&lt;br&gt;+ getCustomerAccountById(): Account&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="660" y="2050" width="270" height="90" as="geometry" />
+          <mxGeometry x="730" y="2050" width="270" height="90" as="geometry" />
         </mxCell>
         <mxCell id="23" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;PositionServiceInterface&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getCustomerPositions(): array&lt;br&gt;+ getCustomerPositionById(): ValuatedPosition&lt;br&gt;+ getAccountPositions(): array&lt;br&gt;+ getAccountPositionById(): ValuatedPosition&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="660" y="2270" width="270" height="140" as="geometry" />
+          <mxGeometry x="730" y="2270" width="270" height="140" as="geometry" />
         </mxCell>
         <mxCell id="24" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;AccountService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- client: ClientInterface&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="290" y="2065" width="240" height="60" as="geometry" />
+          <mxGeometry x="360" y="2065" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="25" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="24" target="22" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="1267" y="1363" as="sourcePoint" />
-            <mxPoint x="1427" y="1363" as="targetPoint" />
+            <mxPoint x="1337" y="1363" as="sourcePoint" />
+            <mxPoint x="1497" y="1363" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="42" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;CustomerServiceInterface&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getCustomers(): array&lt;br&gt;+ getCustomerById(): Customer&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="660" y="2160" width="270" height="90" as="geometry" />
+          <mxGeometry x="730" y="2160" width="270" height="90" as="geometry" />
         </mxCell>
         <mxCell id="43" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;TransactionServiceInterface&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getCustomerTransactions(): array&lt;br&gt;+ getCustomerTransactionById(): Transaction&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="660" y="2426" width="270" height="90" as="geometry" />
+          <mxGeometry x="730" y="2426" width="270" height="90" as="geometry" />
         </mxCell>
         <mxCell id="44" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CustomerService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- client: ClientInterface&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="290" y="2175" width="240" height="60" as="geometry" />
+          <mxGeometry x="360" y="2175" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="45" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;PositionService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- client: ClientInterface&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="290" y="2310" width="240" height="60" as="geometry" />
+          <mxGeometry x="360" y="2310" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="46" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TransactionService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- client: ClientInterface&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="290" y="2441" width="240" height="60" as="geometry" />
+          <mxGeometry x="360" y="2441" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="47" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="44" target="42" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="1267" y="1363" as="sourcePoint" />
-            <mxPoint x="1427" y="1363" as="targetPoint" />
+            <mxPoint x="1337" y="1363" as="sourcePoint" />
+            <mxPoint x="1497" y="1363" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="48" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="45" target="23" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="1267" y="1363" as="sourcePoint" />
-            <mxPoint x="670" y="2295" as="targetPoint" />
+            <mxPoint x="1337" y="1363" as="sourcePoint" />
+            <mxPoint x="740" y="2295" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="49" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="46" target="43" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="1267" y="1363" as="sourcePoint" />
-            <mxPoint x="1427" y="1363" as="targetPoint" />
+            <mxPoint x="1337" y="1363" as="sourcePoint" />
+            <mxPoint x="1497" y="1363" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="115" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="21" target="114">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="590" as="sourcePoint" />
+            <mxPoint x="610" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="116" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="115">
+          <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
+            <mxPoint x="-21" y="-11" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="26" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="16" target="21" edge="1">
@@ -362,30 +368,30 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="27" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CustodyServicesClient&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- client: ClientInterface&lt;br&gt;- customerService: CustomerServiceInterface&lt;br&gt;- accountService: AccountServiceInterface&lt;br&gt;- positionService: PositionServiceInterface&lt;br&gt;- transactionService: TransactionServiceInterface&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ customers(): CustomerServiceInterface&lt;br&gt;+ accounts(): AccountServiceInterface&lt;br&gt;+ positions(): PositionServiceInterface&lt;br&gt;+ transactions(): TransactionServiceInterface&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1180" y="2130" width="280" height="180" as="geometry" />
+          <mxGeometry x="1250" y="2130" width="280" height="180" as="geometry" />
         </mxCell>
         <mxCell id="28" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="22" target="27" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="905" y="1319" as="sourcePoint" />
-            <mxPoint x="1065" y="1319" as="targetPoint" />
+            <mxPoint x="975" y="1319" as="sourcePoint" />
+            <mxPoint x="1135" y="1319" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="50" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="42" target="27" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="905" y="1319" as="sourcePoint" />
-            <mxPoint x="1065" y="1319" as="targetPoint" />
+            <mxPoint x="975" y="1319" as="sourcePoint" />
+            <mxPoint x="1135" y="1319" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="51" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="23" target="27" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="905" y="1319" as="sourcePoint" />
-            <mxPoint x="1065" y="1319" as="targetPoint" />
+            <mxPoint x="975" y="1319" as="sourcePoint" />
+            <mxPoint x="1135" y="1319" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="52" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="43" target="27" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="905" y="1319" as="sourcePoint" />
-            <mxPoint x="1065" y="1319" as="targetPoint" />
+            <mxPoint x="975" y="1319" as="sourcePoint" />
+            <mxPoint x="1135" y="1319" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="53" value="Legend" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;expand=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -428,27 +434,27 @@
           <mxGeometry y="120" width="350" height="30" as="geometry" />
         </mxCell>
         <mxCell id="96" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Quantity&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- type: QuantityType&lt;br&gt;- value: float&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry y="680" width="240" height="110" as="geometry" />
+          <mxGeometry x="100" y="865" width="240" height="110" as="geometry" />
         </mxCell>
         <mxCell id="97" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;QuantityType&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ UNIT: string = &#39;unit&#39;&lt;br&gt;+ FACE_AMOUNT: string = &#39;faceAmount&#39;&lt;br&gt;+ AMORTISED_VALUE: string = &#39;amortisedValue&#39;&lt;br&gt;+ DIGITAL_TOKEN_UNIT: string = &#39;digitalTokenUnit&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-470" y="675" width="400" height="120" as="geometry" />
+          <mxGeometry x="-370" y="860" width="400" height="120" as="geometry" />
         </mxCell>
         <mxCell id="98" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Valuation&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- valueInPositionCurrency: CurrencyAmount&lt;br&gt;- valueInReferenceCurrency: ?CurrencyAmount&lt;br&gt;- valuationDate: ?string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry y="520" width="240" height="140" as="geometry" />
+          <mxGeometry x="50" y="700" width="290" height="140" as="geometry" />
         </mxCell>
         <mxCell id="99" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CurrencyAmount&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- amount: float&lt;br&gt;- currency: string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-320" y="545" width="240" height="90" as="geometry" />
+          <mxGeometry x="-300" y="725" width="240" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="100" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ValuationPrice&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- type: string&lt;br&gt;- value: float&lt;br&gt;- currency: ?string&lt;br&gt;- priceDate: ?string&lt;br&gt;- sourceOfPrice: ?string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="10" y="1120" width="240" height="160" as="geometry" />
+        <mxCell id="100" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ValuationPrice&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- type: PriceType&lt;br&gt;- value: float&lt;br&gt;- currency: ?string&lt;br&gt;- priceDate: ?string&lt;br&gt;- sourceOfPrice: ?string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="100" y="1200" width="240" height="160" as="geometry" />
         </mxCell>
         <mxCell id="101" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ValuationForeignExchangeRate&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- value: float&lt;br&gt;- sourceCurrency: string&lt;br&gt;- targetCurrency: string&lt;br&gt;- rateDate: ?string&lt;br&gt;- sourceOfRate: ?string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry y="890" width="240" height="160" as="geometry" />
+          <mxGeometry x="100" y="1010" width="240" height="160" as="geometry" />
         </mxCell>
         <mxCell id="102" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="16" target="98">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="590" y="575" as="sourcePoint" />
+            <mxPoint x="340" y="775" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="103" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="102">
@@ -458,10 +464,10 @@
         </mxCell>
         <mxCell id="104" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="16" target="96">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="590" y="575" as="sourcePoint" />
+            <mxPoint x="750" y="575" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="240" y="730" />
+              <mxPoint x="340" y="915" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -470,10 +476,25 @@
             <mxPoint x="-21" y="-11" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="118" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="100" target="117">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="390" as="sourcePoint" />
+            <mxPoint x="650" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="119" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="118">
+          <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
+            <mxPoint x="-21" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="106" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.004;exitY=0.701;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="16" target="100">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="510" y="796" as="sourcePoint" />
-            <mxPoint x="275" y="560.21" as="targetPoint" />
+            <mxPoint x="610" y="981" as="sourcePoint" />
+            <mxPoint x="375" y="745.21" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="510" y="954" />
+              <mxPoint x="510" y="1280" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="107" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="106">
@@ -483,12 +504,8 @@
         </mxCell>
         <mxCell id="108" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.004;exitY=0.598;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="16" target="101">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="470" y="630" as="sourcePoint" />
-            <mxPoint x="275" y="560.21" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="370" y="749" />
-              <mxPoint x="370" y="970" />
-            </Array>
+            <mxPoint x="570" y="815" as="sourcePoint" />
+            <mxPoint x="375" y="745.21" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="109" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="108">
@@ -496,10 +513,10 @@
             <mxPoint x="21" y="-11" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="110" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="98" target="99">
+        <mxCell id="110" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="98" target="99">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="100" y="775" as="sourcePoint" />
+            <mxPoint x="750" y="575" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="111" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="110">
@@ -509,8 +526,8 @@
         </mxCell>
         <mxCell id="112" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="96" target="97">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="590" y="575" as="sourcePoint" />
+            <mxPoint x="750" y="575" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="113" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="112">
@@ -519,10 +536,30 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="90" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;MovementType&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ACCRUED_INTEREST: string = &#39;accruedInterest&#39;&lt;br&gt;+ ADDITIONAL_WITHHOLDING_TAX: string = &#39;additionalWithholdingTax&#39;&lt;br&gt;+ ASSET: string = &#39;asset&#39;&lt;br&gt;+ BROKERAGE_FEE: string = &#39;brokerageFee&#39;&lt;br&gt;+ CAPITAL_GAIN_TAX: string = &#39;capitalGainTax&#39;&lt;br&gt;+ CASH: string = &#39;cash&#39;&lt;br&gt;+ COMMISSION: string = &#39;commission&#39;&lt;br&gt;+ CUSTODY_FEE: string = &#39;custodyFee&#39;&lt;br&gt;+ EXCHANGE_FEE: string = &#39;exchangeFee&#39;&lt;br&gt;+ FINANCIAL_TRANSACTION_TAX: string = &#39;financialTransactionTax&#39;&lt;br&gt;+ INTEREST: string = &#39;interest&#39;&lt;br&gt;+ MANAGEMENT_FEE: string = &#39;managementFee&#39;&lt;br&gt;+ OTHER_FEE: string = &#39;otherFee&#39;&lt;br&gt;+ OTHER: string = &#39;other&#39;&lt;br&gt;+ OTHER_TAX: string = &#39;otherTax&#39;&lt;br&gt;+ PREMIUM: string = &#39;premium&#39;&lt;br&gt;+ RECLAIMABLE_TAX: string = &#39;reclaimableTax&#39;&lt;br&gt;+ REINVESTMENT_AMOUNT: string = &#39;reinvestmentAmount&#39;&lt;br&gt;+ STAMP_DUTY: string = &#39;stampDuty&#39;&lt;br&gt;+ THIRD_PARTY_FEE: string = &#39;thirdPartyFee&#39;&lt;br&gt;+ TRANSACTION_FEE: string = &#39;transactionFee&#39;&lt;br&gt;+ VALUE_ADDED_TAX: string = &#39;valueAddedTax&#39;&lt;br&gt;+ WITHHOLDING_TAX: string = &#39;withholdingTax&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1440" y="700" width="400" height="400" as="geometry" />
+          <mxGeometry x="1510" y="700" width="400" height="400" as="geometry" />
         </mxCell>
         <mxCell id="93" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;TransactionType&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ACCUMULATION: string = &#39;accumulation&#39;&lt;br&gt;+ ADDITIONAL_PAYMENT: string = &#39;additionalPayment&#39;&lt;br&gt;+ ADJUST_NOTIONAL: string = &#39;adjustNotional&#39;&lt;br&gt;+ AMORTIZATION_AND_INTEREST_PAYMENT: string = &#39;amortizationAndInterestPayment&#39;&lt;br&gt;+ ASSIGNMENT: string = &#39;assignment&#39;&lt;br&gt;+ ASSIMILATION: string = &#39;assimilation&#39;&lt;br&gt;+ BONUS: string = &#39;bonus&#39;&lt;br&gt;+ BUY: string = &#39;buy&#39;&lt;br&gt;+ BUY_TO_CLOSE: string = &#39;buyToClose&#39;&lt;br&gt;+ CAPITAL_INCREASE: string = &#39;capitalIncrease&#39;&lt;br&gt;+ CLOSE_CONTRACT: string = &#39;closeContract&#39;&lt;br&gt;+ CONVERSION_BOND_SHARE: string = &#39;conversionBondShare&#39;&lt;br&gt;+ COUPON: string = &#39;coupon&#39;&lt;br&gt;+ CREDIT_EVENT: string = &#39;creditEvent&#39;&lt;br&gt;+ DECREASE_PRINCIPAL: string = &#39;decreasePrincipal&#39;&lt;br&gt;+ DELIVERY_FREE_OF_PAYMENT: string = &#39;deliveryFreeOfPayment&#39;&lt;br&gt;+ DELIVERY_VS_PAYMENT: string = &#39;deliveryVsPayment&#39;&lt;br&gt;+ DIVIDEND_CASH: string = &#39;dividendCash&#39;&lt;br&gt;+ DIVIDEND_CHOICE: string = &#39;dividendChoice&#39;&lt;br&gt;+ DIVIDEND_REINVESTMENT: string = &#39;dividendReinvestment&#39;&lt;br&gt;+ DIVIDEND_STOCK: string = &#39;dividendStock&#39;&lt;br&gt;+ EXERCISE: string = &#39;exercise&#39;&lt;br&gt;+ EXPIRATION: string = &#39;expiration&#39;&lt;br&gt;+ FEES: string = &#39;fees&#39;&lt;br&gt;+ FINAL_LIQUIDATION_PAYMENT: string = &#39;finalLiquidationPayment&#39;&lt;br&gt;+ FX_SPOT: string = &#39;fxSpot&#39;&lt;br&gt;+ INCREASE_PRINCIPAL: string = &#39;increasePrincipal&#39;&lt;br&gt;+ INFLOW_CASH: string = &#39;inflowCash&#39;&lt;br&gt;+ INSTRUMENT_EXCHANGE: string = &#39;instrumentExchange&#39;&lt;br&gt;+ INTEREST_PAYMENT: string = &#39;interestPayment&#39;&lt;br&gt;+ INTERNAL_TRANSFER: string = &#39;internalTransfer&#39;&lt;br&gt;+ LIQUIDATION_PAYMENT: string = &#39;liquidationPayment&#39;&lt;br&gt;+ MERGER: string = &#39;merger&#39;&lt;br&gt;+ OPEN_CONTRACT: string = &#39;openContract&#39;&lt;br&gt;+ OTHER: string = &#39;other&#39;&lt;br&gt;+ OUTFLOW_CASH: string = &#39;outflowCash&#39;&lt;br&gt;+ PREMIUM: string = &#39;premium&#39;&lt;br&gt;+ PREPAYMENT_SUBSTITUTION: string = &#39;prepaymentSubstitution&#39;&lt;br&gt;+ RECEIVE_FREE_OF_PAYMENT: string = &#39;receiveFreeOfPayment&#39;&lt;br&gt;+ RECEIVE_VS_PAYMENT: string = &#39;receiveVsPayment&#39;&lt;br&gt;+ REDEMPTION: string = &#39;redemption&#39;&lt;br&gt;+ REDEMPTION_PARTIAL: string = &#39;redemptionPartial&#39;&lt;br&gt;+ REDEMPTION_PRIOR: string = &#39;redemptionPrior&#39;&lt;br&gt;+ REDUCTION_OF_NOMINAL: string = &#39;reductionOfNominal&#39;&lt;br&gt;+ RESET_PAYMENT: string = &#39;resetPayment&#39;&lt;br&gt;+ RIGHT_DISTRIBUTION: string = &#39;rightDistribution&#39;&lt;br&gt;+ SELL: string = &#39;sell&#39;&lt;br&gt;+ SELL_TO_OPEN: string = &#39;sellToOpen&#39;&lt;br&gt;+ SPIN_OFF: string = &#39;spinOff&#39;&lt;br&gt;+ STOCK_SPLIT: string = &#39;stockSplit&#39;&lt;br&gt;+ SUBSCRIPTION: string = &#39;subscription&#39;&lt;br&gt;+ TAX_CORRECTIONS: string = &#39;taxCorrections&#39;&lt;br&gt;+ TAXES: string = &#39;taxes&#39;&lt;br&gt;+ TRANSFER_METAL_PHYSICAL: string = &#39;transferMetalPhysical&#39;&lt;br&gt;+ UNWIND: string = &#39;unwind&#39;&lt;br&gt;+ VARIATION_MARGIN: string = &#39;variationMargin&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1040" y="1130" width="550" height="850" as="geometry" />
+          <mxGeometry x="1110" y="1130" width="550" height="870" as="geometry" />
+        </mxCell>
+        <mxCell id="117" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;PriceType&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ACTUAL: string = &#39;actual&#39;&lt;br&gt;+ PERCENTAGE: string = &#39;percentage&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-370" y="1235" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="120" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;InterestRateType&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ FIXED: string = &#39;fixed&#39;&lt;br&gt;+ VARIABLE: string = &#39;variable&#39;&lt;br&gt;+ STAGGERED: string = &#39;staggered&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-370" y="1350" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="121" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;InterestRate&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- type: InterestRateType&lt;br&gt;- value: ?float&lt;br&gt;- dayCountBasis: ?string&lt;br&gt;- basis: ?string&lt;br&gt;- spread: ?float&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="100" y="1380" width="240" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="122" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="121" target="120">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="390" as="sourcePoint" />
+            <mxPoint x="650" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="123" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="122">
+          <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
+            <mxPoint x="-21" y="-11" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
