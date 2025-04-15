@@ -12,7 +12,7 @@ class InterestRate
     /**
      * @param InterestRateType $type Type of interest (fixed, variable, staggered)
      * @param float|null $value Current rate as decimal
-     * @param string|null $dayCountBasis Day count basis
+     * @param DayCountBasis|null $dayCountBasis Day count basis
      * @param string|null $paymentDate Date of the next interest payment
      * @param string|null $paymentFrequency Frequency of an interest payment
      * @param string|null $basis Benchmark by which floating rate will adjust
@@ -21,7 +21,7 @@ class InterestRate
     public function __construct(
         private readonly InterestRateType $type,
         private readonly ?float $value = null,
-        private readonly ?string $dayCountBasis = null,
+        private readonly ?DayCountBasis $dayCountBasis = null,
         private readonly ?string $paymentDate = null,
         private readonly ?string $paymentFrequency = null,
         private readonly ?string $basis = null,
@@ -52,9 +52,9 @@ class InterestRate
     /**
      * Get the day count basis
      *
-     * @return string|null
+     * @return DayCountBasis|null
      */
-    public function getDayCountBasis(): ?string
+    public function getDayCountBasis(): ?DayCountBasis
     {
         return $this->dayCountBasis;
     }
@@ -107,10 +107,14 @@ class InterestRate
      */
     public static function fromArray(array $data): self
     {
+        $dayCountBasis = isset($data['dayCountBasis']) 
+            ? DayCountBasis::from($data['dayCountBasis']) 
+            : null;
+            
         return new self(
             InterestRateType::from($data['type']),
             isset($data['value']) ? (float)$data['value'] : null,
-            $data['dayCountBasis'] ?? null,
+            $dayCountBasis,
             $data['paymentDate'] ?? null,
             $data['paymentFrequency'] ?? null,
             $data['basis'] ?? null,
@@ -134,7 +138,7 @@ class InterestRate
         }
         
         if ($this->dayCountBasis !== null) {
-            $data['dayCountBasis'] = $this->dayCountBasis;
+            $data['dayCountBasis'] = $this->dayCountBasis->value;
         }
         
         if ($this->paymentDate !== null) {
