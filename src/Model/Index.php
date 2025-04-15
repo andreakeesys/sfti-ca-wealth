@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class Index extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Index instruments
+     */
+    public const TYPE = 'index';
+    
+    /**
      * Create an Index from an array of data
      *
      * @param array<string, mixed> $data

@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class CryptoAsset extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Crypto Asset instruments
+     */
+    public const TYPE = 'cryptoAsset';
+    
+    /**
      * Create a CryptoAsset from an array of data
      *
      * @param array<string, mixed> $data

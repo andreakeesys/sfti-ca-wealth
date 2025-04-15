@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class Equity extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Equity instruments
+     */
+    public const TYPE = 'equity';
+    
+    /**
      * Create an Equity from an array of data
      *
      * @param array<string, mixed> $data

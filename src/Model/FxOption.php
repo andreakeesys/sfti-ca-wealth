@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class FxOption extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for FX Option instruments
+     */
+    public const TYPE = 'fxOption';
+    
+    /**
      * @param string $expiryDateTime Expiry date and time
      * @param CurrencyAmount $underlyingAmount Underlying currency amount
      * @param CurrencyAmount $counterAmount Counter currency amount

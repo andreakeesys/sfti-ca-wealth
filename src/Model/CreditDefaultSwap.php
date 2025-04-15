@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class CreditDefaultSwap extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Credit Default Swap instruments
+     */
+    public const TYPE = 'creditDefaultSwap';
+    
+    /**
      * @param CurrencyAmount $notionalAmount Notional amount
      * @param string|null $maturityDate Maturity date
      * @param FinancialInstrument|null $underlyingFinancialInstrument Underlying financial instrument

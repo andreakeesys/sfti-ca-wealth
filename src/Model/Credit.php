@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class Credit extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Credit instruments
+     */
+    public const TYPE = 'credit';
+    
+    /**
      * @param CurrencyAmount $principalAmount Principal amount
      * @param InterestRate|null $interestRate Interest rate
      * @param float|null $limit Maximum principal amount allowed

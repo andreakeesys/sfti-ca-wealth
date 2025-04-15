@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class Fund extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Fund instruments
+     */
+    public const TYPE = 'fund';
+    
+    /**
      * Create a Fund from an array of data
      *
      * @param array<string, mixed> $data

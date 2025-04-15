@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class TotalReturnSwap extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Total Return Swap instruments
+     */
+    public const TYPE = 'totalReturnSwap';
+    
+    /**
      * @param CurrencyAmount $notionalAmount Notional amount
      * @param FinancialInstrument $underlyingFinancialInstrument Underlying financial instrument
      * @param InterestRate|null $interestRatePaid Interest rate paid

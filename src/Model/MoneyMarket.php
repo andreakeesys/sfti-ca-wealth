@@ -10,6 +10,26 @@ namespace OpenWealth\CustodyServices\Model;
 class MoneyMarket extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Fixed Loan instruments
+     */
+    public const TYPE_FIXED_LOAN = 'fixedLoan';
+    
+    /**
+     * Type identifier for Fixed Deposit instruments
+     */
+    public const TYPE_FIXED_DEPOSIT = 'fixedDeposit';
+    
+    /**
+     * Type identifier for Callable Loan instruments
+     */
+    public const TYPE_CALLABLE_LOAN = 'callableLoan';
+    
+    /**
+     * Type identifier for Callable Deposit instruments
+     */
+    public const TYPE_CALLABLE_DEPOSIT = 'callableDeposit';
+    
+    /**
      * @param CurrencyAmount $principalAmount Principal amount
      * @param InterestRate|null $interestRate Interest rate
      * @param string|null $maturityDate Maturity date

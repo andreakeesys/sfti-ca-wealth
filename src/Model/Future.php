@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class Future extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Future instruments
+     */
+    public const TYPE = 'future';
+    
+    /**
      * @param FinancialInstrument $underlyingFinancialInstrument Underlying financial instrument
      * @param string|null $expiryDate Expiry date
      * @param float|null $contractSize Contract size

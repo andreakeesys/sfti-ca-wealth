@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class FxForward extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for FX Forward instruments
+     */
+    public const TYPE = 'fxForward';
+    
+    /**
      * @param CurrencyAmount $amountPaid Amount paid at maturity
      * @param CurrencyAmount $amountReceived Amount received at maturity
      * @param string $maturityDate Maturity date

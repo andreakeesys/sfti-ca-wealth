@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class FxSwap extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for FX Swap instruments
+     */
+    public const TYPE = 'fxSwap';
+    
+    /**
      * @param CurrencyAmount $nearAmountPaid Amount paid at the earlier part
      * @param CurrencyAmount $nearAmountReceived Amount received at the earlier part
      * @param CurrencyAmount $farAmountPaid Amount paid at maturity

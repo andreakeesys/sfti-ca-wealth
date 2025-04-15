@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class Mortgage extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Mortgage instruments
+     */
+    public const TYPE = 'mortgage';
+    
+    /**
      * @param CurrencyAmount $principalAmount Principal amount
      * @param InterestRate|null $interestRate Interest rate
      * @param float|null $limit Maximum principal amount allowed

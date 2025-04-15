@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class OtherFinancialInstrument extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Other financial instruments
+     */
+    public const TYPE = 'other';
+    
+    /**
      * @param FinancialInstrument|null $underlyingFinancialInstrument Underlying financial instrument
      */
     public function __construct(

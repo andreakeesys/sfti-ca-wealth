@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class Commodity extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Commodity instruments
+     */
+    public const TYPE = 'commodity';
+    
+    /**
      * Create a Commodity from an array of data
      *
      * @param array<string, mixed> $data

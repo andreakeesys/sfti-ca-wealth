@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class Option extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Option instruments
+     */
+    public const TYPE = 'option';
+    
+    /**
      * @param FinancialInstrument $underlyingFinancialInstrument Underlying financial instrument
      * @param string|null $expiryDate Expiry date
      * @param Price|null $exercisePrice Exercise price

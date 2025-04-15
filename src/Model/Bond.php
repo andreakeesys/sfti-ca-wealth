@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class Bond extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Bond instruments
+     */
+    public const TYPE = 'bond';
+    
+    /**
      * @param InterestRate|null $interestRate Interest rate
      * @param string|null $maturityDate Maturity date
      * @param string|null $issueDate Issue date

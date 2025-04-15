@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class Cash extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Cash instruments
+     */
+    public const TYPE = 'cash';
+    
+    /**
      * Create a Cash from an array of data
      *
      * @param array<string, mixed> $data

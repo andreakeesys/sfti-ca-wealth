@@ -10,6 +10,11 @@ namespace OpenWealth\CustodyServices\Model;
 class InterestRateSwap extends FinancialInstrumentBase
 {
     /**
+     * Type identifier for Interest Rate Swap instruments
+     */
+    public const TYPE = 'interestRateSwap';
+    
+    /**
      * @param CurrencyAmount $notionalAmount Notional amount
      * @param InterestRate $interestRatePaid Interest rate paid
      * @param InterestRate $interestRateReceived Interest rate received
