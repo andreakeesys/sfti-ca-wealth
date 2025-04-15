@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Model Relationships">
-    <mxGraphModel dx="2892" dy="1029" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="3602" dy="1453" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -202,16 +202,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="15" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Transaction&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- id: string&lt;br&gt;- type: TransactionType&lt;br&gt;- movementList: ?array&lt;br&gt;- triggeringFinancialInstrument: ?FinancialInstrument&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1110" y="600" width="310" height="150" as="geometry" />
+          <mxGeometry x="1110" y="750" width="310" height="150" as="geometry" />
         </mxCell>
         <mxCell id="126" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="15" target="17">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1430" y="675" as="sourcePoint" />
             <mxPoint x="1380" y="480" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="1450" y="675" />
-              <mxPoint x="1450" y="515" />
-            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="127" value="contains list of" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="126">
@@ -219,13 +215,24 @@
             <mxPoint x="15" y="-11" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="157" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.65;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="17" target="96">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1000" y="600" as="sourcePoint" />
+            <mxPoint x="1160" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="158" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="157">
+          <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
+            <mxPoint x="-21" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="94" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="15" target="93">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="560" y="390" as="sourcePoint" />
             <mxPoint x="720" y="390" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1070" y="675" />
-              <mxPoint x="1070" y="1565" />
+              <mxPoint x="1060" y="825" />
+              <mxPoint x="1060" y="1565" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -235,24 +242,46 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="16" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ValuatedPosition&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- id: string&lt;br&gt;- financialInstrument: FinancialInstrument&lt;br&gt;- account: Account&lt;br&gt;- quantity: Quantity&lt;br&gt;- valuation: Valuation&lt;br&gt;- price: ?ValuationPrice&lt;br&gt;- foreignExchangeRate: ?ValuationForeignExchangeRate&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="640" y="817" width="360" height="195" as="geometry" />
+          <mxGeometry x="380" y="695" width="360" height="195" as="geometry" />
         </mxCell>
-        <mxCell id="17" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Movement&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- type: MovementType&lt;br&gt;- financialInstrument: FinancialInstrument&lt;br&gt;- account: Account&lt;br&gt;- quantity: Quantity&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1510" y="480" width="240" height="140" as="geometry" />
+        <mxCell id="17" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Movement&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- type: MovementType&lt;br&gt;- financialInstrument: FinancialInstrument&lt;br&gt;- account: Account&lt;br&gt;- quantity: Quantity&lt;br&gt;- positionId: string&lt;br&gt;- price: ?Price&lt;br&gt;- foreignExchangeRate: ?ForeignExchangeRate&lt;br&gt;- positionCurrency: ?string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1510" y="480" width="290" height="200" as="geometry" />
         </mxCell>
         <mxCell id="91" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="17" target="90">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="560" y="390" as="sourcePoint" />
             <mxPoint x="720" y="390" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1470" y="550" />
-              <mxPoint x="1470" y="900" />
+              <mxPoint x="1490" y="580" />
+              <mxPoint x="1490" y="900" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="92" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="91">
           <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
             <mxPoint x="-1" y="89" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="151" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1.001;entryY=0.795;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="17" target="100">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1000" y="600" as="sourcePoint" />
+            <mxPoint x="1160" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="152" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="151">
+          <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
+            <mxPoint x="-21" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="153" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.85;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="17" target="101">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1000" y="600" as="sourcePoint" />
+            <mxPoint x="1160" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="154" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="153">
+          <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
+            <mxPoint x="-21" y="-11" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="18" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.465;exitY=-0.013;exitDx=0;exitDy=0;entryX=0.292;entryY=0.989;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="15" target="0" edge="1">
@@ -266,15 +295,19 @@
             <mxPoint x="6" y="-9" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="19" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.085;entryY=0.996;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="16" edge="1" target="0">
+        <mxCell id="19" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.085;entryY=0.996;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="16" edge="1" target="0">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="490" y="390" as="sourcePoint" />
             <mxPoint x="1020" y="290" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="650" y="540" />
+              <mxPoint x="1216" y="540" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="19a" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="19" vertex="1" connectable="0">
           <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
-            <mxPoint x="-12" y="-3" as="offset" />
+            <mxPoint x="125" y="-3" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="20" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="17" target="0" edge="1">
@@ -282,7 +315,7 @@
             <mxPoint x="490" y="390" as="sourcePoint" />
             <mxPoint x="650" y="390" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1630" y="400" />
+              <mxPoint x="1655" y="400" />
               <mxPoint x="1295" y="400" />
             </Array>
           </mxGeometry>
@@ -290,6 +323,22 @@
         <mxCell id="20a" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="20" vertex="1" connectable="0">
           <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
             <mxPoint x="-70" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="155" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="17" target="21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1000" y="600" as="sourcePoint" />
+            <mxPoint x="1160" y="600" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1582" y="450" />
+              <mxPoint x="950" y="450" />
+              <mxPoint x="950" y="165" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="156" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="155">
+          <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
+            <mxPoint x="-21" y="-11" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="114" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;AccountType&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ CASH_ACCOUNT: string = &#39;cashAccount&#39;&lt;br&gt;+ SAFEKEEPING_ACCOUNT: string = &#39;safekeepingAccount&#39;&lt;br&gt;+ OTHER: string = &#39;other&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
@@ -375,15 +424,19 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="450" y="590" as="sourcePoint" />
             <mxPoint x="610" y="590" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="560" y="510" />
+              <mxPoint x="755" y="510" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="26a" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="26" vertex="1" connectable="0">
           <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
-            <mxPoint x="-29" y="-63" as="offset" />
+            <mxPoint x="-2" y="-4" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="40" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;PostingAmount&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- amount: float&lt;br&gt;- currency: string&lt;br&gt;- account: Account&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getAmount(): float&lt;br&gt;+ getCurrency(): string&lt;br&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="180" y="450" width="240" height="150" as="geometry" />
+          <mxGeometry x="210" y="355" width="240" height="150" as="geometry" />
         </mxCell>
         <mxCell id="41" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="40" target="21" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -404,7 +457,7 @@
         </mxCell>
         <mxCell id="132" value="contains list of" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="131">
           <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
-            <mxPoint x="148" y="-9" as="offset" />
+            <mxPoint x="-32" y="-19" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="27" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CustodyServicesClient&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- client: ClientInterface&lt;br&gt;- customerService: CustomerServiceInterface&lt;br&gt;- accountService: AccountServiceInterface&lt;br&gt;- positionService: PositionServiceInterface&lt;br&gt;- transactionService: TransactionServiceInterface&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ customers(): CustomerServiceInterface&lt;br&gt;+ accounts(): AccountServiceInterface&lt;br&gt;+ positions(): PositionServiceInterface&lt;br&gt;+ transactions(): TransactionServiceInterface&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -483,27 +536,27 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="96" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Quantity&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- type: QuantityType&lt;br&gt;- value: float&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="100" y="859.5" width="240" height="110" as="geometry" />
+          <mxGeometry x="-80" y="849.5" width="240" height="110" as="geometry" />
         </mxCell>
         <mxCell id="97" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;QuantityType&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ UNIT: string = &#39;unit&#39;&lt;br&gt;+ FACE_AMOUNT: string = &#39;faceAmount&#39;&lt;br&gt;+ AMORTISED_VALUE: string = &#39;amortisedValue&#39;&lt;br&gt;+ DIGITAL_TOKEN_UNIT: string = &#39;digitalTokenUnit&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-370" y="854.5" width="400" height="120" as="geometry" />
+          <mxGeometry x="-550" y="844.5" width="400" height="120" as="geometry" />
         </mxCell>
         <mxCell id="98" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Valuation&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- valueInPositionCurrency: CurrencyAmount&lt;br&gt;- valueInReferenceCurrency: ?CurrencyAmount&lt;br&gt;- valuationDate: ?string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="50" y="700" width="290" height="140" as="geometry" />
+          <mxGeometry x="-160" y="670" width="290" height="140" as="geometry" />
         </mxCell>
         <mxCell id="99" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CurrencyAmount&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- amount: float&lt;br&gt;- currency: string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-300" y="725" width="240" height="90" as="geometry" />
+          <mxGeometry x="-530" y="695" width="240" height="90" as="geometry" />
         </mxCell>
         <mxCell id="100" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ValuationPrice&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- type: PriceType&lt;br&gt;- value: float&lt;br&gt;- currency: ?string&lt;br&gt;- priceDate: ?string&lt;br&gt;- sourceOfPrice: ?string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="100" y="1170" width="240" height="160" as="geometry" />
+          <mxGeometry x="-80" y="1160" width="240" height="160" as="geometry" />
         </mxCell>
         <mxCell id="101" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ValuationForeignExchangeRate&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- value: float&lt;br&gt;- sourceCurrency: string&lt;br&gt;- targetCurrency: string&lt;br&gt;- rateDate: ?string&lt;br&gt;- sourceOfRate: ?string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fromArray(data): self&lt;br&gt;+ toArray(): array&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="100" y="990" width="240" height="160" as="geometry" />
+          <mxGeometry x="-80" y="980" width="240" height="160" as="geometry" />
         </mxCell>
         <mxCell id="102" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="16" target="98">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="590" y="575" as="sourcePoint" />
-            <mxPoint x="340" y="775" as="targetPoint" />
+            <mxPoint x="410" y="565" as="sourcePoint" />
+            <mxPoint x="160" y="765" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="103" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="102">
@@ -513,8 +566,8 @@
         </mxCell>
         <mxCell id="104" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="16" target="96">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="590" y="575" as="sourcePoint" />
-            <mxPoint x="750" y="575" as="targetPoint" />
+            <mxPoint x="410" y="565" as="sourcePoint" />
+            <mxPoint x="570" y="565" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="105" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="104">
@@ -524,8 +577,8 @@
         </mxCell>
         <mxCell id="118" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="100" target="117">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="490" y="390" as="sourcePoint" />
-            <mxPoint x="650" y="390" as="targetPoint" />
+            <mxPoint x="310" y="380" as="sourcePoint" />
+            <mxPoint x="470" y="380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="119" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="118">
@@ -535,12 +588,8 @@
         </mxCell>
         <mxCell id="106" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.004;exitY=0.701;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="16" target="100">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="610" y="981" as="sourcePoint" />
-            <mxPoint x="375" y="745.21" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="510" y="954" />
-              <mxPoint x="510" y="1250" />
-            </Array>
+            <mxPoint x="430" y="971" as="sourcePoint" />
+            <mxPoint x="195" y="735.21" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="107" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="106">
@@ -550,8 +599,8 @@
         </mxCell>
         <mxCell id="108" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.004;exitY=0.598;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="16" target="101">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="570" y="815" as="sourcePoint" />
-            <mxPoint x="375" y="745.21" as="targetPoint" />
+            <mxPoint x="390" y="805" as="sourcePoint" />
+            <mxPoint x="195" y="735.21" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="109" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="108">
@@ -561,8 +610,8 @@
         </mxCell>
         <mxCell id="110" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="98" target="99">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="100" y="775" as="sourcePoint" />
-            <mxPoint x="750" y="575" as="targetPoint" />
+            <mxPoint x="-80" y="765" as="sourcePoint" />
+            <mxPoint x="570" y="565" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="111" value="contains" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="110">
@@ -572,8 +621,8 @@
         </mxCell>
         <mxCell id="112" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="96" target="97">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="590" y="575" as="sourcePoint" />
-            <mxPoint x="750" y="575" as="targetPoint" />
+            <mxPoint x="410" y="565" as="sourcePoint" />
+            <mxPoint x="570" y="565" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="113" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="112">
@@ -588,7 +637,7 @@
           <mxGeometry x="1110" y="1130" width="550" height="870" as="geometry" />
         </mxCell>
         <mxCell id="117" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;PriceType&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ACTUAL: string = &#39;actual&#39;&lt;br&gt;+ PERCENTAGE: string = &#39;percentage&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-380" y="1205" width="300" height="90" as="geometry" />
+          <mxGeometry x="-560" y="1195" width="300" height="90" as="geometry" />
         </mxCell>
         <mxCell id="120" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;InterestRateType&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ FIXED: string = &#39;fixed&#39;&lt;br&gt;+ VARIABLE: string = &#39;variable&#39;&lt;br&gt;+ STAGGERED: string = &#39;staggered&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="3340" y="1241" width="300" height="100" as="geometry" />
@@ -614,6 +663,11 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="880" y="410" as="sourcePoint" />
             <mxPoint x="1040" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="135" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="134">
+          <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
+            <mxPoint x="19" y="119" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="136" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;PaymentFrequency&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ANNUAL: string = &#39;annual&#39;&lt;br&gt;+ MONTHLY: string = &#39;monthly&#39;&lt;br&gt;+ QUARTERLY: string = &#39;quarterly&#39;&lt;br&gt;+ SEMI_ANNUAL: string = &#39;semiAnnual&#39;&lt;br&gt;+ WEEKLY: string = &#39;weekly&#39;&lt;br&gt;+ AT_MATURITY: string = &#39;atMaturity&#39;&lt;br&gt;+ OTHER: string = &#39;other&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
