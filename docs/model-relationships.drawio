@@ -992,6 +992,20 @@
             <mxPoint x="-21" y="11" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="200" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;FinancialInstrumentIdentificationType&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ISIN: string = &#39;isin&#39;&lt;br&gt;+ SEDOL: string = &#39;sedol&#39;&lt;br&gt;+ CUSIP: string = &#39;cusip&#39;&lt;br&gt;+ RIC: string = &#39;ric&#39;&lt;br&gt;+ TICKER_SYMBOL: string = &#39;tickerSymbol&#39;&lt;br&gt;+ BLOOMBERG: string = &#39;bloomberg&#39;&lt;br&gt;+ CTA: string = &#39;cta&#39;&lt;br&gt;+ QUICK: string = &#39;quick&#39;&lt;br&gt;+ WERTPAPIER: string = &#39;wertpapier&#39;&lt;br&gt;+ DUTCH: string = &#39;dutch&#39;&lt;br&gt;+ VALOREN: string = &#39;valoren&#39;&lt;br&gt;+ SICOVAM: string = &#39;sicovam&#39;&lt;br&gt;+ BELGIAN: string = &#39;belgian&#39;&lt;br&gt;+ COMMON: string = &#39;common&#39;&lt;br&gt;+ ISO3: string = &#39;iso3&#39;&lt;br&gt;+ OTHER_PROPRIETARY_IDENTIFICATION: string = &#39;otherProprietaryIdentification&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2550" y="450" width="400" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="201" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="171" target="200">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2490" y="510" as="sourcePoint" />
+            <mxPoint x="2550" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="202" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="201">
+          <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
+            <mxPoint x="-21" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
