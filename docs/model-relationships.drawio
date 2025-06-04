@@ -978,6 +978,20 @@
             <mxPoint x="-21" y="-11" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="197" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;FinancialInstrumentType&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ CASH: string = &#39;cash&#39;&lt;br&gt;+ BOND: string = &#39;bond&#39;&lt;br&gt;+ EQUITY: string = &#39;equity&#39;&lt;br&gt;+ FUND: string = &#39;fund&#39;&lt;br&gt;+ INDEX: string = &#39;index&#39;&lt;br&gt;+ COMMODITY: string = &#39;commodity&#39;&lt;br&gt;+ OPTION: string = &#39;option&#39;&lt;br&gt;+ FUTURE: string = &#39;future&#39;&lt;br&gt;+ FX_FORWARD: string = &#39;fxForward&#39;&lt;br&gt;+ FX_SWAP: string = &#39;fxSwap&#39;&lt;br&gt;+ FX_OPTION: string = &#39;fxOption&#39;&lt;br&gt;+ MORTGAGE: string = &#39;mortgage&#39;&lt;br&gt;+ CREDIT: string = &#39;credit&#39;&lt;br&gt;+ FIXED_LOAN: string = &#39;fixedLoan&#39;&lt;br&gt;+ FIXED_DEPOSIT: string = &#39;fixedDeposit&#39;&lt;br&gt;+ CALLABLE_LOAN: string = &#39;callableLoan&#39;&lt;br&gt;+ CALLABLE_DEPOSIT: string = &#39;callableDeposit&#39;&lt;br&gt;+ INTEREST_RATE_SWAP: string = &#39;interestRateSwap&#39;&lt;br&gt;+ TOTAL_RETURN_SWAP: string = &#39;totalReturnSwap&#39;&lt;br&gt;+ CREDIT_DEFAULT_SWAP: string = &#39;creditDefaultSwap&#39;&lt;br&gt;+ CRYPTO_ASSET: string = &#39;cryptoAsset&#39;&lt;br&gt;+ OTHER: string = &#39;other&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1470" y="160" width="350" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="198" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="1" target="197">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1965" y="480" as="sourcePoint" />
+            <mxPoint x="1645" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="199" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="198">
+          <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
+            <mxPoint x="-21" y="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
